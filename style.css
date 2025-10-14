@@ -13,6 +13,7 @@ body {
   text-align: center;
 }
 
+/* --- BOTÓN --- */
 #dailyButton {
   font-family: 'Press Start 2P', cursive;
   font-size: 24px;
@@ -42,4 +43,34 @@ body {
   font-size: 10px;
   margin-top: 20px;
   color: #bbb;
+}
+
+/* --- TEXTOS FIJOS EN ESQUINAS --- */
+.infoText {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+#top-left {
+  top: 10px;
+  left: 10px;
+}
+
+#top-right {
+  top: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+#bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+#bottom-right {
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
 }
