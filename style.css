@@ -57,6 +57,17 @@ body {
   top: 10px;
   left: 10px;
 }
+#top-center {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.4;
+}
 
 #top-right {
   top: 10px;
