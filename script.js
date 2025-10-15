@@ -145,3 +145,7 @@ updateCurrentDate();
 updateCountdown();
 updateBestStreak();
 updateStartDate();
+
+// --- Texto superior central ---
+const topCenter = document.getElementById("top-center");
+topCenter.innerHTML = `Código por @valen.ar<br>Calvosland Proyect #004:<br>"La Racha"`;
