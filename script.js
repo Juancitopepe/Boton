@@ -90,7 +90,7 @@ button.addEventListener("click", () => {
 resetIfMissed();
 updateButton();
 if (canPressToday()) enableButton();
-else disableButtonForToday();
+else disableButtonForToday();24
 
 // --- FECHA actual (arriba izquierda) ---
 function updateCurrentDate() {
@@ -106,7 +106,7 @@ function updateCurrentDate() {
 function updateCountdown() {
   const now = getArgentinaDate();
   const midnight = new Date(now);
-  midnight.setHours(11, 24, 0, 0);
+  midnight.setHours(24, 0, 0, 0);
   const diff = midnight - now;
   const h = String(Math.floor(diff / 3600000)).padStart(2, "0");
   const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
