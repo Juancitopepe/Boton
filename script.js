@@ -55,6 +55,17 @@ function enableButton() {
   info.textContent = "Podés presionar el botón.";
 }
 
+// --- MODO VACACIONES (RACHA CONGELADA) ---
+function isVacationFreeze() {
+  const now = getArgentinaDate();
+
+  // Período congelado (29 OCT 2025 → 1 NOV 2025)
+  const start = new Date("2025-10-29T00:00:00-03:00");
+  const end = new Date("2025-11-02T00:00:00-03:00"); // hasta el final del 1/11
+
+  return now >= start && now < end;
+}
+
 // --- Evento de clic ---
 button.addEventListener("click", () => {
   if (!canPressToday()) {
