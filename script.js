@@ -68,6 +68,14 @@ function isVacationFreeze() {
 
 // --- Evento de clic ---
 button.addEventListener("click", () => {
+
+  // ✅ PRIMERO: chequeo de vacaciones
+  if (isVacationFreeze()) {
+    info.textContent = "Racha congelada por vacaciones ✈️ No hace falta tocar el botón.";
+    return;
+  }
+
+  // ✅ DESPUÉS: chequeo normal de si ya tocaste hoy
   if (!canPressToday()) {
     disableButtonForToday();
     return;
@@ -100,8 +108,14 @@ button.addEventListener("click", () => {
 // --- Inicialización ---
 resetIfMissed();
 updateButton();
-if (canPressToday()) enableButton();
-else disableButtonForToday();24
+if (isVacationFreeze()) {
+  disableButtonForToday();
+  info.textContent = "Racha congelada por vacaciones ✈️";
+} else {
+  if (canPressToday()) enableButton();
+  else disableButtonForToday();
+}
+
 
 // --- FECHA actual (arriba izquierda) ---
 function updateCurrentDate() {
